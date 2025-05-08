@@ -45,7 +45,6 @@
 #}
 
 <header class="bg-primary text-white flex flex-wrap items-center justify-between" role="banner">
-	{{ page.header_top }}
 	{{ page.header }}
 </header>
 
@@ -78,8 +77,4 @@
 
 {{ page.breadcrumb }}
 
-{% if page.footer %}
-	<footer class="bg-black text-white" role="contentinfo">
-		{{ page.footer }}
-	</footer>
-{% endif %}
+{{ page.footer }}
