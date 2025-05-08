@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "EB Garamond", "Hina Mincho", serif;
+  --color-primary: #aa2828;
+  --color-warning: #c4b174;
+}
+@utility container {
+  margin-inline: auto;
+}
+
+@utility content-auto {
+  content-visibility: auto;
+}
+
+@utility vertical-rl {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+@utility c-title {
+  @apply relative pb-2;
+
+  &::before,
+  &::after {
+    @apply content-[''] absolute left-0 h-[1px] bg-warning;
+  }
+  &::before {
+    @apply w-20 bottom-0;
+  }
+  &::after {
+    @apply w-10 -bottom-2;
+  }
+}
+.hero-image {
+  @apply relative;
+
+  &::before,
+  &::after {
+    @apply content-[''] absolute z-10 w-30 md:w-65 aspect-[13/6] bg-[url(https://kimono-fukumoto.com/assets/img/common/ornament02.svg)] bg-no-repeat bg-contain;
+  }
+  &::before {
+    @apply top-[8%] left-[5%];
+  }
+  &::after {
+    @apply bottom-[8%] left-[30%];
+  }
+}
+.page-header{
+  @apply grid *:col-[-1/-1] *:row-[-1/-1];
+  &::before,
+  &::after {
+    @apply w-15 md:w-65;
+  }
+  &::after {
+    @apply left-auto right-[5%];
+  }
+}
+.panel {
+  @apply py-12 md:py-20 px-4 md:px-8 flex flex-col space-y-10;
+}
+.panel_title {
+  @apply text-3xl flex flex-col items-center font-bold before:content-[url(https://kimono-fukumoto.com/assets/img/common/ornament01.svg)];
+}
+.btn-more {
+  @apply block mx-auto relative w-50 md:w-70 bg-primary text-white text-center py-2 md:py-4;
+  &::after {
+    @apply content-[''] absolute top-1/2 right-2 w-8 h-[1px] bg-white transition-[width] delay-300;
+  }
+  &:hover::after {
+    @apply w-0;
+  }
+}
+.breadcrumb {
+  @apply container mx-auto flex [&>li:not(:last-child)]:after:content-['›'] [&>li:not(:last-child)]:after:px-2;
+}
+main::before {
+  background-image: url("https://kimono-fukumoto.com/assets/img/common/bg_left.png"),
+    url("https://kimono-fukumoto.com/assets/img/common/bg_right.png");
+  background-position: left, right;
+  background-size: 25vw auto, 25vw auto;
+  @apply content-[''] absolute inset-0 z-[-1] bg-repeat-y;
+}
+
+.front_about {
+  background-image: url(https://kimono-fukumoto.com/assets/img/top/bg_about_left.png),url(https://kimono-fukumoto.com/assets/img/top/bg_about_right.png);
+  background-position: left top,right top;
+  background-size: 50vw auto, 50vw auto;
+  @apply bg-repeat-y bg-white;
+}
+
+.about_list {
+  @apply container mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 *:shadow-md;
+}
+.about_list_item {
+  @apply bg-white;
+}
+.about_list_item_img {
+  @apply relative grid *:col-[-1/-1] *:row-[-1/-1];
+  &::after {
+    background-image: url(https://kimono-fukumoto.com/assets/img/common/ornament03.svg);
+    @apply content-[''] absolute -left-3 bottom-11 w-9 aspect-square bg-contain bg-no-repeat;
+  }
+}
+.about_list_item_img_txt {
+  @apply c-title bg-white flex items-center self-end justify-self-start h-15 px-4 text-2xl;
+  &::before,
+  &::after {
+    @apply left-4;
+  }
+}
+
+.guide_list {
+  counter-reset:number 0;
+  @apply grid gap-10;
+}
+.guide_list_item {
+  @apply bg-white relative grid gap-4 shadow-md px-5 md:px-8 py-8;
+  &::before,
+  &::after {
+    @apply content-[''] absolute -left-4 md:-left-8 -top-6 text-white w-15 md:w-23 aspect-square bg-contain bg-no-repeat text-center text-sm;
+  }
+
+  &::before {
+    background-image: url(https://kimono-fukumoto.com/assets/img/guide/step.svg);
+    @apply content-['Step'] pt-4;
+  }
+  &::after {
+    @apply md:text-3xl pt-9;
+    counter-increment: number 1;
+    content: counter(number, decimal-leading-zero);
+  }
+}
+
+.store-info {
+  @apply py-5 border-b border-gray-200 flex max-md:flex-col gap-2;
+}
+.store-info__title{
+  @apply flex items-center gap-2 md:w-1/6;
+  &::before {
+    @apply content-[''] w-5 h-[1px] bg-primary;
+  }
+}

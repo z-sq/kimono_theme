@@ -1,0 +1,19 @@
+{
+  "name": "kimono_theme",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Modern Drupal 11 theme with Vite, Tailwind CSS and React",
+  "scripts": {
+    "watch": "npx @tailwindcss/cli -i ./src/style.css -o ./css/theme/style.css --watch",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.5",
+    "@tailwindcss/vite": "^4.1.5",
+    "tailwindcss": "^4.1.5",
+    "vite": "^6.3.4"
+  }
+}

@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ennichi Kimono</title>
+    <link href="./src/style.css" rel="stylesheet">
+    <script src="https://unpkg.com/alpinejs" defer></script>
+  </head>
+  <body class="antialiased text-base font-serif">
+    <header class="bg-primary text-white flex flex-wrap items-center justify-between sticky top-0 z-50" role="banner">
+      <div class="border-b border-white w-screen h-8 text-xs flex items-center justify-center space-x-4 md:justify-end">
+        <a href="#">简体中文</a>
+        <a href="#">繁体中文</a>
+        <a href="#">日本語</a>
+        <a href="#">English</a>
+      </div>
+      <div class="block ml-4">
+        <a class="flex md:flex-col items-center space-x-2 space-y-1" href="#">
+          <img
+            class="size-10"
+            src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=100"
+            alt="Brand Logo"
+          />
+          <span class="text-xs">ENNICHI KIMONO</span>
+        </a>
+      </div>
+      <nav class="flex items-center md:h-20 mr-10" aria-label="Global">
+        <button class="lg:hidden border">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16"
+            fill="currentColor"
+            class="size-6"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M2 3.75A.75.75 0 0 1 2.75 3h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 3.75ZM2 8a.75.75 0 0 1 .75-.75h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 8Zm0 4.25a.75.75 0 0 1 .75-.75h10.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75Z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </button>
+        <ul class="flex items-center space-x-8 max-lg:hidden">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Rental Plan</a></li>
+          <li><a href="#">Store Info</a></li>
+          <li><a href="#">Usage Flow</a></li>
+          <li><a href="#">Return Method</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a class="bg-white px-16 py-4 text-primary" href="#">予約する</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="relative z-0 bg-[url('https://kimono-fukumoto.com/assets/img/common/bg.png')]">
+
+      <section class="panel">
+        <div class="container mx-auto bg-white py-15 px-4 lg:px-25 grid gap-10 shadow-md">
+          <h1 class="panel_title">基础小纹和服套系</h1>
+          <h2 class="c-title">振袖和服-A套系</h2>
+          <p>仅限预订，正常价格 ¥16,800</p>
+          <p>15,800 <small>円(含税)</small></p>
+        </div>
+      </section>
+
+
+      <section class="hero-image" aria-label="Hero image">
+        <swiper-container>
+          <swiper-slide>
+            <figure class="">
+              <img
+                class="w-screen max-md:h-screen md:aspect-video object-cover"
+                src="https://kimono-fukumoto.com/manager/wp-content/uploads/2023/03/mv01_pc_20230322.jpg"
+                alt=""
+              />
+            </figure>
+          </swiper-slide>
+          <swiper-slide>
+            <figure class="">
+              <img
+                class="w-screen max-md:h-screen md:aspect-video object-cover"
+                src="https://kimono-fukumoto.com/manager/wp-content/uploads/2023/01/mv02_pc.jpg"
+                alt=""
+              />
+            </figure>
+          </swiper-slide>
+        </swiper-container>
+        <h2 class="absolute z-20 left-[25%] md:left-[20%] top-[24%] h-[60%] vertical-rl">
+          <span class="bg-white p-2 text-2xl md:text-5xl/24 tracking-[1.5rem]">穿着和服在京都闲逛</span>
+        </h2>
+      </section>
+
+      <section class="hero-image page-header" aria-label="Hero image">
+        <h1 class="relative z-1 text-2xl md:text-5xl text-white bg-black/20 flex items-center justify-center">关于我们</h1>
+        <img class="w-screen h-40 md:h-75 object-cover " src="https://kimono-fukumoto.com/assets/img/about/mv_pc.jpg" alt="关于我们">
+      </section>
+
+      <section class="panel">
+        <h2 class="panel_title">什么是福本</h2>
+        <figure class="grid md:grid-cols-5 shadow-md lg:w-250 mx-auto">
+          <img
+            class="w-full object-cover md:col-span-2"
+            src="https://kimono-fukumoto.com/assets/img/about/about.webp"
+            alt="关于我们"
+          />
+          <figcaption class="bg-white p-4 md:p-8 grid content-start gap-6 md:col-span-3">
+            <h2 class="c-title text-2xl">2021年作为Kataya Co., Ltd.的直营店开业。</h2>
+            <p class="text-justify">所谓福本 2021年作为Kataya Co., Ltd.的直营店开业。 KATAYA株式会社于2010年进入和服行业，主要经营“布料、缝制、染色”，与全国的和服店、京都的染厂、各产区的布料店都有交易。利用自己在和服行业的经验，开了一家可以租借和服的店铺，传播和服的优点，想为和服行业做贡献，于是开了“和服租借体验店福本”。</p>
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="panel front_about">
+        <h2 class="panel_title">について</h2>
+        <ul class="about_list">
+          <li class="about_list_item">
+            <figure class="about_list_item_img">
+              <img
+                class="w-full object-cover"
+                src="https://kimono-fukumoto.com/assets/img/about/point01.jpg"
+                alt="正絹の着物"
+              />
+              <figcaption class="about_list_item_img_txt c-title">正絹の着物</figcaption>
+            </figure>
+            <p class="px-4 py-6">会社の本業は着物の「生地・縫製・染色」です。全国の呉服店、京友禅と各産地の生地屋さんと取引して来ましたので、当社のレンタル店も沢山「生地・縫製・染色」に拘った正絹着物をご用意致しました。</p>
+          </li>
+          <li class="about_list_item">
+            <figure class="about_list_item_img">
+              <img
+                class="w-full object-cover"
+                src="https://kimono-fukumoto.com/assets/img/about/point02.webp"
+                alt="飲茶をしながら休憩"
+              />
+              <figcaption class="about_list_item_img_txt c-title">飲茶をしながら休憩</figcaption>
+            </figure>
+            <p class="px-4 py-6">着物の着付待ち時間を有意義に過ごして頂ける様に、１階に休憩ができ「本場の味」を堪能して頂ける飲茶処を設けています。着物をレンタルしなくても御利用頂けます。</p>
+          </li>
+          <li class="about_list_item">
+            <figure class="about_list_item_img">
+              <img
+                class="w-full object-cover"
+                src="https://kimono-fukumoto.com/assets/img/about/point03.webp"
+                alt="ヘアセット"
+              />
+              <figcaption class="about_list_item_img_txt c-title">ヘアセット</figcaption>
+            </figure>
+            <p class="px-4 py-6">ヘアセットのスタッフは管理美容師の資格を保有しています。</p>
+          </li>
+          <li class="about_list_item">
+            <figure class="about_list_item_img">
+              <img
+                class="w-full object-cover"
+                src="https://kimono-fukumoto.com/assets/img/about/point04.webp"
+                alt="清水寺から一番近いお店"
+              />
+              <figcaption class="about_list_item_img_txt c-title">清水寺から一番近いお店</figcaption>
+            </figure>
+            <p class="px-4 py-6">清水寺から一番近くにあるお店です。着物を着てすぐに清水寺に観光して頂きやすい場所にあり、おすすめのお店です。</p>
+          </li>
+          <li class="about_list_item">
+            <figure class="about_list_item_img">
+              <img
+                class="w-full object-cover"
+                src="https://kimono-fukumoto.com/assets/img/about/point05.webp"
+                alt="本格的な着付け"
+              />
+              <figcaption class="about_list_item_img_txt c-title">本格的な着付け</figcaption>
+            </figure>
+            <p class="px-4 py-6">着付けを担当しているスタッフは「日本和装協会認定の師範資格」を習得しており、資格よりも更なる長年の着付け経験からお客様に満足していて頂ける本格的な着付けを体験して頂けます。SNSに投稿しても恥ずかしく無い自信が有ります。</p>
+          </li>
+          <li class="about_list_item">
+            <figure class="about_list_item_img">
+              <img
+                class="w-full object-cover"
+                src="https://kimono-fukumoto.com/assets/img/about/point06.webp"
+                alt="フルパックプラン"
+              />
+              <figcaption class="about_list_item_img_txt c-title">フルパックプラン</figcaption>
+            </figure>
+            <p class="px-4 py-6">下記アイテムがご利用頂けるお得なプランです。<br> 着物、帯、襦袢、帯飾り、かばん・巾着、草履、足袋＋（秋・冬のみ）ショール・羽織、ヘアセット</p>
+          </li>
+        </ul>
+
+        <a
+          class="btn-more"
+          href="/about"
+          >もっと見る</a
+        >
+      </section>
+
+      <section class="panel bg-[url(https://kimono-fukumoto.com/assets/img/top/bg_plan.png)]">
+        <h2 class="panel_title">租赁计划</h2>
+        <div
+          class="container mx-auto grid grid-cols-2 md:grid-cols-[repeat(auto-fill,minmax(240px,1fr))] gap-4 lg:gap-6 *:shadow-md"
+        >
+          <article>
+            <a class="block" href="#">
+              <figure class="hover:opacity-80 transition-opacity duration-300">
+                <img
+                  class="w-full object-cover"
+                  src="https://kimono-fukumoto.com/manager/wp-content/uploads/2022/11/訪問着本格プラン-320x450.png"
+                  alt="访问服-A套系"
+                  loading="lazy"
+                />
+                <figcaption class="bg-white text-center">
+                  <h3 class="p-2 max-md:text-sm">访问服-A套系</h3>
+                  <p class="p-4 border-t border-gray-300 md:text-xl">
+                    <data class="font-mono" value="14800">14,800</data>
+                    <small>円</small>
+                  </p>
+                </figcaption>
+              </figure>
+            </a>
+          </article>
+        </div>
+
+        <a
+          class="btn-more"
+          href="#plan"
+          >查看更多</a
+        >
+      </section>
+
+      <section class="panel">
+        <div class="container mx-auto bg-white py-15 px-4 lg:px-25 grid gap-10 shadow-md">
+          <h2 class="panel_title">店铺信息</h2>
+          <ul class="px-2">
+            <li class="store-info">
+              <h3 class="store-info__title">地址</h3>
+              <address>
+                〒605-0846<br class="md:sr-only">
+                京都府京都市东山区五条桥东 6-539-35
+              </address>
+            </li>
+            <li class="store-info">
+              <h3 class="store-info__title">营业时间</h3>
+              <p>
+                <time datetime="09:00">上午9:00</time> -  <time datetime="18:00">下午6:00</time>
+              </p>
+            </li>
+            <li class="store-info">
+              <h3 class="store-info__title">定期休息</h3>
+              <p>每周 7 天</p>
+            </li>
+            <li class="store-info">
+              <h3 class="store-info__title">电话号码</h3>
+              <a href="tel:075-585-4416"> 075-585-4416 </a>
+            </li>
+            <li class="store-info">
+              <h3 class="store-info__title">邮件地址</h3>
+              <a href="mailto:rentalkimono.fukumoto@gmail.com">rentalkimono.fukumoto@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="panel bg-[url(https://kimono-fukumoto.com/assets/img/top/bg_kankoumap.png)]">
+        <div class="container mx-auto bg-white py-15 px-4 lg:px-25 grid gap-10 shadow-md">
+          <h2 class="panel_title">観光地MAP</h2>
+          <ul class="grid md:grid-cols-3 max-md:gap-4 lg:px-15 mb-10">
+            <li>
+              <figure>
+                <img class="w-full aspect-square" src="https://kimono-fukumoto.com/assets/img/common/kyoto_map_sp.png" alt="京都站周边" loading="lazy">
+                <figcaption class="sr-only">京都站周边</figcaption>
+              </figure>
+            </li>
+            <li class="md:col-span-2 md:row-span-2">
+              <figure>
+                <img class="w-full aspect-square" src="https://kimono-fukumoto.com/assets/img/common/fukumoto_map_sp.png" alt="租借和服福本周边" loading="lazy">
+                <figcaption class="sr-only">租借和服福本周边</figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure>
+                <img class="w-full aspect-square" src="https://kimono-fukumoto.com/assets/img/common/arashiyama_map_sp.png" alt="嵐山駅周辺" loading="lazy">
+                <figcaption class="sr-only">嵐山駅周辺</figcaption>
+              </figure>
+            </li>
+          </ul>
+
+          <h2 class="panel_title">推荐景点</h2>
+          <swiper-container class="*:px-4 lg:*:px-15 *:pb-15" navigation pagination pagination-type="fraction">
+            <swiper-slide>
+              <figure class="grid gap-4 md:gap-8 md:grid-cols-2">
+                <img
+                  class="w-full object-cover"
+                  src="https://kimono-fukumoto.com/assets/img/common/spot/spot01.webp"
+                  alt="清水寺"
+                  loading="lazy"
+                />
+                <figcaption class="bg-white grid content-start gap-2 md:gap-4 md:order-first">
+                  <h3 class="text-center text-lg md:text-2xl">清水寺</h3>
+                  <p class="text-justify max-md:text-sm">
+                    以“清水舞台”而闻名的正殿（国宝）是一个以春天的樱花和新绿、秋天的红叶和四个季节的美景为背景的舞台结构。它从悬崖顶部突出，可以欣赏到城市的美景。<br>
+                    境内有奥之院、阿弥陀堂等重要文化财产。 <br>
+                    京都站市营巴士（86、100、110、206）→清水巴士站（所需时间：10分钟/费用：230日元）<br>
+                    从清水寺巴士站步行至清水寺（所需时间：15分钟）
+                  </p>
+                </figcaption>
+              </figure>
+            </swiper-slide>
+            <!-- <swiper-slide>
+              <figure class="grid gap-8 md:grid-cols-2">
+                <img
+                  class="w-full object-cover"
+                  src="https://kimono-fukumoto.com/assets/img/common/spot/spot02.webp"
+                  alt="平安神宫"
+                  loading="lazy"
+                />
+                <figcaption class="bg-white grid content-start gap-2 md:gap-4 md:order-first">
+                  <h3 class="text-center text-lg md:text-2xl">平安神宫</h3>
+                  <p class="text-justify max-md:text-sm">
+                    从可以仰望的大鸟居，到参拜的参道，再到本殿，都可以感受到平安神宫王朝的富丽堂皇。 虽然它通常被认为是古老的，但它是在 1895 年为纪念平安首都建立 1100 周年而建造的。<br>
+                    漆成鲜艳的朱红色和绿色的主楼是平安京大日里主楼的八分之五缩小。  <br>
+                    ◆ 市营巴士“冈崎公园美术馆/平安神宫前”下车<br>
+                    ◆ 地铁东西线“东山”站下车，步行10分钟
+                  </p>
+                </figcaption>
+              </figure>
+            </swiper-slide> -->
+          </swiper-container>
+        </div>
+      </section>
+
+      <section class="panel">
+        <ol class="guide_list lg:w-250 mx-auto">
+          <li class="guide_list_item md:grid-cols-3">
+            <div class="grid gap-4 content-start md:col-span-2 md:pl-15 lg:pl-20">
+              <h2 class="c-title text-lg lg:text-2xl">预订</h2>
+              <p>当日预约OK</p>
+              <a class="bg-primary text-white flex items-center justify-center w-60 h-12 max-sm:mx-auto" href="#">点此预约</a>
+              <a class="border flex items-center justify-center w-60 h-12 max-sm:mx-auto" href="tel:0755854416">075-585-4416</a>
+            </div>
+            <img src="https://kimono-fukumoto.com/assets/img/guide/step01.jpg" alt="预订" loading="lazy">
+          </li>
+          <li class="guide_list_item md:grid-cols-3">
+            <div class="grid gap-4 content-start md:col-span-2 md:pl-15 lg:pl-20">
+              <h2 class="c-title text-lg lg:text-2xl">访问</h2>
+              <p>免费行李 <br> 寄存</p>
+              <a class="bg-primary text-white flex items-center justify-center w-60 h-12 max-sm:mx-auto" href="#">到达福本路线</a>
+            </div>
+            <img src="https://kimono-fukumoto.com/assets/img/guide/step02.webp" alt="访问" loading="lazy">
+          </li>
+          <li class="guide_list_item md:grid-cols-3">
+            <div class="grid gap-4 content-start md:col-span-2 md:pl-15 lg:pl-20">
+              <h2 class="c-title text-lg lg:text-2xl">着装和发型设置</h2>
+              <p>当天免费更改/取消</p>
+              <a class="bg-primary text-white flex items-center justify-center w-60 h-12 max-sm:mx-auto" href="#">计划清单</a>
+            </div>
+            <img src="https://kimono-fukumoto.com/assets/img/guide/step03.webp" alt="着装和发型设置" loading="lazy">
+          </li>
+          <li class="guide_list_item md:grid-cols-3">
+            <div class="grid gap-4 content-start md:col-span-2 md:pl-15 lg:pl-20">
+              <h2 class="c-title text-lg lg:text-2xl">穿着和服漫步</h2>
+              <p>您可以穿着和服在京都世界遗产的热门观光景点漫步。</p>
+            </div>
+            <img src="https://kimono-fukumoto.com/assets/img/guide/step04.webp" alt="穿着和服漫步" loading="lazy">
+          </li>
+          <li class="guide_list_item md:grid-cols-3">
+            <div class="grid gap-4 content-start md:col-span-2 md:pl-15 lg:pl-20">
+              <h2 class="c-title text-lg lg:text-2xl">返回</h2>
+              <p>营业时间为上午 9:00 至下午 6:00。<br> 请在当天下午5:30之前归还。</p>
+            </div>
+            <img src="https://kimono-fukumoto.com/assets/img/guide/step05.webp" alt="返回" loading="lazy">
+          </li>
+        </ol>
+      </section>
+
+      <section class="panel">
+        <ul class="container mx-auto bg-white py-15 px-4 lg:px-25 grid gap-5 shadow-md">
+          <li>
+            <h2 class="border-l-3 border-primary p-4 md:p-5 bg-gray-50 md:text-xl">可以不预约吗？</h2>
+            <p class="p-4 md:p-6 max-md:text-sm">有可能。根据预订情况，有时会遇到困难，因此如果您能给我们打电话，我们将不胜感激。</p>
+          </li>
+          <li>
+            <h2 class="border-l-3 border-primary p-4 md:p-5 bg-gray-50 md:text-xl">我可以改变我的计划吗？</h2>
+            <p class="p-4 md:p-6 max-md:text-sm">也可以在预订后更改计划。也可以在当天访问商店后更改计划，因此请与我们联系。</p>
+          </li>
+          <li>
+            <h2 class="border-l-3 border-primary p-4 md:p-5 bg-gray-50 md:text-xl">我可以托运行李吗？</h2>
+            <p class="p-4 md:p-6 max-md:text-sm">有可能。我们将免费寄存您的行李。</p>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- 面包屑导航 -->
+    <nav class="bg-white p-4 text-sm" aria-label="system-breadcrumb">
+      <h2 id="system-breadcrumb" class="sr-only">Breadcrumb</h2>
+      <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <!-- 首页 -->
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="#" itemprop="item">首页</a>
+          <meta itemprop="name" content="首页" />
+          <meta itemprop="position" content="1" />
+        </li>
+        <!-- 中间层级 -->
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/category" itemprop="item">分类</a>
+          <meta itemprop="name" content="分类" />
+          <meta itemprop="position" content="2" />
+        </li>
+        <!-- 当前页 -->
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <span itemprop="name" aria-current="page">当前页面</span>
+          <meta itemprop="name" content="当前页面" />
+          <meta itemprop="position" content="3" />
+        </li>
+      </ol>
+    </nav>
+
+    <footer class="border-t border-gray-300 bg-black text-white">
+      <section class="bg-stone-400">
+        <div
+          class="container py-10 flex flex-col items-center md:py-20 space-y-4 text-white"
+        >
+          <img
+            class="size-10 lg:size-15"
+            src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
+            alt="Brand Logo"
+          />
+          <p class="text-2xl">ENNICHI KIMONO</p>
+          <p class="text-sm">〒111-0032　東京都台東区浅草1-11-1</p>
+          <p class="text-sm">営業時間：午前9:00 ～ 午後6:00</p>
+        </div>
+      </section>
+      <p class="contaienr p-4 flex items-center justify-center h-10 text-xs">
+        &copy; 2025 ENNICHI KIMONO. All rights reserved.
+      </p>
+    </footer>
+
+    <script src="https://unpkg.com/swiper@11/swiper-element-bundle.min.js"></script>
+  </body>
+</html>

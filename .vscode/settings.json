@@ -1,0 +1,22 @@
+{
+  "tailwindCSS.includeLanguages": {
+    "twig": "html"
+  },
+  "tailwindCSS.classAttributes": [
+    "class",
+    "className"
+  ],
+  "tailwindCSS.classFunctions": [
+    "addClass"
+  ],
+  "tailwindCSS.experimental.classRegex": [
+    ["addClass\\(([^)]*)\\)", "[\"'`]([^\"'`]+)[\"'`]"]
+  ],
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "files.associations": {
+    "*.html.twig": "twig",
+    "*.css": "tailwindcss"
+  }
+}

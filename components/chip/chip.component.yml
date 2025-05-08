@@ -1,0 +1,49 @@
+# Everything in this file is optional. Still, the file needs to exist.
+# Adding metadata here will improve the DX when using components.
+
+# Note: currently in Drupal 10.1, the schema will fail to validate if props section is not present. This may change in a future  release.
+
+# This is so your IDE knows about the syntax for fixes and autocomplete.
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+
+# The human readable name.
+name: Chip
+
+# Status can be: "experimental", "stable", "deprecated", "obsolete".
+status: stable
+
+# Schema for the props. We support JSON Schema. Learn more about the syntax at https://json-schema.org
+# The props section is currently required. See Components without Properties section below.
+props:
+  # Props are always an object with keys. Each key is a variable in your component template.
+  type: object
+
+  # If your component has required properties, you list them here.
+  required:
+    - color
+
+  properties:
+    # Can the chip be dismissed by clicking on it?
+    dismissable:
+      type: boolean
+      title: Dismissable
+      description: If true users can dismiss the chip by clicking on it.
+      # @todo Add examples here.
+      examples: []
+
+    # One of 'primary', or 'secondary'.
+    color:
+      type: string
+      title: Color
+      description: "Background color to use for the chip, one of 'primary' or 'secondary'."
+      # @todo Add examples here.
+      examples: []
+      # The enum directive restricts the possible values in the element to our list.
+      enum: ['primary', 'secondary']
+
+# Slots always hold arbitrary markup. We know that beforehand, so no need for a schema for slots.
+slots:
+  # The key is the name of the slot. In your template you will use {% block body %}.
+  chip_content:
+    title: Content
+    description: Content of the chip
