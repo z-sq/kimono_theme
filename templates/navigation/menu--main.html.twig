@@ -26,6 +26,21 @@
 #}
 {{ menus.menu_links(items, attributes, 0) }}
 
+<button class="lg:hidden border">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 16 16"
+    fill="currentColor"
+    class="size-6"
+  >
+    <path
+      fill-rule="evenodd"
+      d="M2 3.75A.75.75 0 0 1 2.75 3h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 3.75ZM2 8a.75.75 0 0 1 .75-.75h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 8Zm0 4.25a.75.75 0 0 1 .75-.75h10.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75Z"
+      clip-rule="evenodd"
+    />
+  </svg>
+</button>
+
 {% macro menu_links(items, attributes, menu_level) %}
   {% import _self as menus %}
   {% if items %}
@@ -34,11 +49,23 @@
     {% else %}
       <ul>
     {% endif %}
-    {% for item in items %}
+    {# {% for item in items %}
       <li{{ item.attributes }}>
         {{ link(item.title, item.url) }}
         {% if item.below %}
           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+        {% endif %}
+      </li>
+    {% endfor %} #}
+
+    {% for item in items %}
+      <li{{ item.attributes }}>
+        {% if loop.last %}
+        {# 如果是最后一个菜单项，使用特殊样式或结构 #}
+        <a class="bg-white px-16 py-4 text-primary" href="{{ item.url }}"> {{ item.title }} <span aria-hidden="true">&rarr;</span></a>
+        {% else %}
+        {# 普通菜单项 #}
+        <a href="{{ item.url }}"> {{ item.title }} </a>
         {% endif %}
       </li>
     {% endfor %}
