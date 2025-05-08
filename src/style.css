@@ -1,4 +1,5 @@
-@import "tailwindcss";
+@import "tailwindcss" source(none);
+@source "../index.html";
 
 @theme {
   --font-serif: "EB Garamond", "Hina Mincho", serif;

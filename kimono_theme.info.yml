@@ -6,7 +6,7 @@ package: Custom
 core_version_requirement: ^10 || ^11
 libraries:
   - kimono_theme/global
-  - kimono_theme/tailwind-cdn
+  # - kimono_theme/tailwind-cdn
   # - core/normalize
 regions:
   header: 'Header'
