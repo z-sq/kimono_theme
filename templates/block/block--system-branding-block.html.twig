@@ -14,7 +14,7 @@
  */
 #}
 {% block content %}
-<div class="block ml-4">
+<div class="ml-4 ml:ml-10">
   <a{{attributes.addClass('flex md:flex-col items-center space-x-2 space-y-1')}} href="{{ path('<front>') }}" rel="home">
     {% if site_logo %}
     <img{{attributes.addClass('size-10')}} src="{{ site_logo }}" alt="{{ 'Home'|t }}" fetchpriority="high" />
