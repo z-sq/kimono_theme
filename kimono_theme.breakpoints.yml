@@ -5,26 +5,37 @@ kimono_theme.extra_small:
   multipliers:
     - 1x
 kimono_theme.small:
-  label: mobile
-  mediaQuery: 'all and (min-width: 576px) and (max-width: 767px)'
+  label: small
+  mediaQuery: 'all and (width >= 40rem)'
   weight: 1
   multipliers:
     - 1x
+    - 2x
 kimono_theme.medium:
-  label: narrow
-  mediaQuery: 'all and (min-width: 768px) and (max-width: 991px)'
+  label: medium
+  mediaQuery: 'all and (width >= 48rem)'
   weight: 2
   multipliers:
     - 1x
+    - 2x
 kimono_theme.large:
-  label: wide
-  mediaQuery: 'all and (min-width: 992px) and (max-width: 1199px)'
+  label: large
+  mediaQuery: 'all and (width >= 64rem)'
   weight: 3
   multipliers:
     - 1x
+    - 2x
 kimono_theme.extra_large:
   label: wide
-  mediaQuery: 'all and (min-width: 1200px)'
+  mediaQuery: 'all and (width >= 80rem)'
   weight: 4
   multipliers:
     - 1x
+    - 2x
+kimono_theme.extra_large_2x:
+  label: wide
+  mediaQuery: 'all and (width >= 96rem)'
+  weight: 5
+  multipliers:
+    - 1x
+    - 2x
