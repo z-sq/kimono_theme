@@ -9,7 +9,7 @@
     <script src="https://unpkg.com/alpinejs" defer></script>
   </head>
   <body class="antialiased text-base font-serif">
-    <header class="bg-primary text-white flex flex-wrap items-center justify-between sticky top-0 z-50" role="banner" x-data="{ open: false }">
+    <header class="bg-primary text-white flex flex-wrap items-center justify-between sticky top-0 z-50" role="banner" x-data="{ open: true }">
       <div class="border-b border-white w-screen h-8 px-4 text-xs flex items-center space-x-4 justify-end">
         <a href="#">简体中文</a>
         <a href="#">繁体中文</a>
@@ -42,8 +42,8 @@
         </svg>
       </button>
 
-      <nav class="md:mr-10 max-lg:absolute max-lg:bg-white max-lg:inset-x-0 max-lg:top-full max-lg:text-primary" aria-label="Global" x-show="open">
-        <ul class="flex items-center lg:space-x-8 max-lg:flex-col">
+      <nav class="md:mr-10 lg:py-4 max-lg:absolute max-lg:bg-white max-lg:inset-x-0 max-lg:top-full max-lg:text-primary" aria-label="Global" x-show="open">
+        <ul class="flex items-center lg:space-x-8 max-lg:flex-col max-lg:py-4">
           <li><a href="#">Home</a></li>
           <li><a href="#">About Us</a></li>
           <li><a href="#">Rental Plan</a></li>
@@ -51,7 +51,7 @@
           <li><a href="#">Usage Flow</a></li>
           <li><a href="#">Return Method</a></li>
           <li><a href="#">FAQ</a></li>
-          <li><a class="bg-white block px-16 py-2 text-primary" href="#">予約する</a></li>
+          <li><a class="bg-white block px-16 py-4 text-primary" href="#">予約する</a></li>
         </ul>
       </nav>
     </header>
@@ -419,11 +419,10 @@
           class="container py-10 flex flex-col items-center md:py-20 space-y-4 text-white"
         >
           <img
-            class="size-10 lg:size-15"
-            src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
+            class="size-50 lg:size-60"
+            src="https://static.ennichikimono.com/logo.jpg"
             alt="Brand Logo"
           />
-          <p class="text-2xl">ENNICHI KIMONO</p>
           <p class="text-sm">〒111-0032　東京都台東区浅草1-11-1</p>
           <p class="text-sm">営業時間：午前9:00 ～ 午後6:00</p>
         </div>

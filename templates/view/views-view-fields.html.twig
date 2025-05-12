@@ -29,7 +29,6 @@
  * @see template_preprocess_views_view_fields()
  */
 #}
-{{ dump() }}
 <a href="{{ fields.view_node.content|striptags|trim }}">
   <figure class="hover:opacity-80 transition-opacity duration-300">
     <img
@@ -44,7 +43,7 @@
         <data class="font-mono" value="{{ fields.field_price.content|striptags|trim|replace({',': ''}) }}">
           {{ fields.field_price.content|striptags|trim }}
         </data>
-        <small>円</small>
+        {# <small>円</small> #}
       </p>
     </figcaption>
   </figure>
