@@ -36,3 +36,14 @@ tailwind-cdn:
         async: true
         defer: true
         crossorigin: anonymous
+alpine-cdn:
+  version: 3.14.9
+  header: true
+  js:
+    https://unpkg.com/alpinejs:
+      type: external
+      minified: true
+      attributes:
+        async: true
+        defer: true
+        crossorigin: anonymous

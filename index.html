@@ -9,8 +9,8 @@
     <script src="https://unpkg.com/alpinejs" defer></script>
   </head>
   <body class="antialiased text-base font-serif">
-    <header class="bg-primary text-white flex flex-wrap items-center justify-between sticky top-0 z-50" role="banner">
-      <div class="border-b border-white w-screen h-8 text-xs flex items-center justify-center space-x-4 md:justify-end">
+    <header class="bg-primary text-white flex flex-wrap items-center justify-between sticky top-0 z-50" role="banner" x-data="{ open: false }">
+      <div class="border-b border-white w-screen h-8 px-4 text-xs flex items-center space-x-4 justify-end">
         <a href="#">简体中文</a>
         <a href="#">繁体中文</a>
         <a href="#">日本語</a>
@@ -26,22 +26,24 @@
           <span class="text-xs">ENNICHI KIMONO</span>
         </a>
       </div>
-      <nav class="flex items-center md:h-20 mr-4 md:mr-10" aria-label="Global">
-        <button class="lg:hidden border">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 16 16"
-            fill="currentColor"
-            class="size-6"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M2 3.75A.75.75 0 0 1 2.75 3h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 3.75ZM2 8a.75.75 0 0 1 .75-.75h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 8Zm0 4.25a.75.75 0 0 1 .75-.75h10.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75Z"
-              clip-rule="evenodd"
-            />
-          </svg>
-        </button>
-        <ul class="flex items-center space-x-8 max-lg:hidden">
+
+      <button class="lg:hidden border mr-4" @click="open = !open">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 16 16"
+          fill="currentColor"
+          class="size-6"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M2 3.75A.75.75 0 0 1 2.75 3h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 3.75ZM2 8a.75.75 0 0 1 .75-.75h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 8Zm0 4.25a.75.75 0 0 1 .75-.75h10.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75Z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </button>
+
+      <nav class="md:mr-10 max-lg:absolute max-lg:bg-white max-lg:inset-x-0 max-lg:top-full max-lg:text-primary" aria-label="Global" x-show="open">
+        <ul class="flex items-center lg:space-x-8 max-lg:flex-col">
           <li><a href="#">Home</a></li>
           <li><a href="#">About Us</a></li>
           <li><a href="#">Rental Plan</a></li>
@@ -49,7 +51,7 @@
           <li><a href="#">Usage Flow</a></li>
           <li><a href="#">Return Method</a></li>
           <li><a href="#">FAQ</a></li>
-          <li><a class="bg-white px-16 py-4 text-primary" href="#">予約する</a></li>
+          <li><a class="bg-white block px-16 py-2 text-primary" href="#">予約する</a></li>
         </ul>
       </nav>
     </header>

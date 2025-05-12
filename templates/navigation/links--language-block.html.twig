@@ -33,7 +33,7 @@
 #}
 
 {% if links -%}
-  <ul{{ attributes.addClass('border-b border-white w-screen h-8 text-xs flex items-center justify-center space-x-4 md:justify-end') }}>
+  <ul{{ attributes.addClass('border-b border-white w-screen h-8 px-4 text-xs flex items-center space-x-4 justify-end') }}>
     {%- for item in links -%}
       <li{{ item.attributes }}>
         {%- if item.link -%}
