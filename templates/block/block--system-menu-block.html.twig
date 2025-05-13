@@ -49,7 +49,7 @@
   </svg>
 </button>
 
-<nav class="md:mr-10 max-lg:absolute max-lg:bg-white max-lg:inset-x-0 max-lg:top-full max-lg:text-primary" role="navigation" aria-labelledby="{{ heading_id }}"{{ attributes|without('role', 'aria-labelledby') }} x-show="open">
+<nav class="md:mr-10 lg:py-4 max-lg:absolute max-lg:bg-white max-lg:inset-x-0 max-lg:top-full max-lg:text-primary lg:block!" role="navigation" aria-labelledby="{{ heading_id }}"{{ attributes|without('role', 'aria-labelledby') }} x-show="open">
   {# Label. If not displayed, we still provide it for screen readers. #}
   {% if not configuration.label_display %}
     {% set title_attributes = title_attributes.addClass('visually-hidden') %}

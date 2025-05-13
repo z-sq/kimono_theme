@@ -141,3 +141,8 @@ main::before {
     @apply content-[''] w-5 h-[1px] bg-primary;
   }
 }
+
+
+.rental-plan {
+  @apply container mx-auto grid grid-cols-2 md:grid-cols-[repeat(auto-fill,minmax(240px,1fr))] gap-4 lg:gap-6 *:shadow-md;
+}

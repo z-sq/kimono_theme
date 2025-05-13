@@ -47,7 +47,7 @@
       <li{{ item.attributes }}>
         {% if loop.last %}
         {# 如果是最后一个菜单项，使用特殊样式或结构 #}
-        <a class="bg-white px-16 py-4 text-primary" href="{{ item.url }}"> {{ item.title }} <span aria-hidden="true">&rarr;</span></a>
+        <a class="bg-white block px-16 py-4 text-primary" href="{{ item.url }}"> {{ item.title }} <span aria-hidden="true">&rarr;</span></a>
         {% else %}
         {# 普通菜单项 #}
         <a href="{{ item.url }}"> {{ item.title }} </a>

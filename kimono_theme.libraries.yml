@@ -47,3 +47,14 @@ alpine-cdn:
         async: true
         defer: true
         crossorigin: anonymous
+swiper-cdn:
+  version: 3.14.9
+  js:
+    https://unpkg.com/swiper@11/swiper-element-bundle.min.js:
+      type: external
+      minified: true
+      attributes:
+        async: true
+        defer: true
+        crossorigin: anonymous
+
