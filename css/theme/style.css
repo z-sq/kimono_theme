@@ -665,9 +665,9 @@
       aspect-ratio: var(--aspect-video);
     }
   }
-  .md\:h-75 {
+  .md\:h-80 {
     @media (width >= 48rem) {
-      height: calc(var(--spacing) * 75);
+      height: calc(var(--spacing) * 80);
     }
   }
   .md\:grid-cols-2 {
