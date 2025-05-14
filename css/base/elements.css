@@ -1,0 +1,45 @@
+@keyframes pulse-throbber {
+  0% {
+    opacity: 1;
+    transform: scaley(1);
+  }
+
+  100% {
+    opacity: 0.2;
+    transform: scaley(0.5);
+  }
+}
+
+[data-big-pipe-placeholder-id] {
+  position: relative;
+  display: block;
+  margin: 20px auto;
+  width: 6px;
+  height: 30px;
+  background: rebeccaPurple;
+  animation: pulse-throbber 0.2s infinite;
+  animation-delay: (0.2s / 3);
+  animation-direction: alternate;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rebeccaPurple;
+    top: 0;
+    animation: pulse-throbber 0.2s infinite;
+    animation-direction: alternate;
+  }
+
+  &:before {
+    left: -12px;
+  }
+
+  &:after {
+    left: 12px;
+    animation-delay: (0.2s / 1.5);
+  }
+}

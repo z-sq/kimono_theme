@@ -17,13 +17,12 @@
     {% set position = 1 %}
     {% for item in breadcrumb %}
       <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        {% if item.is_current %}
-          <span aria-current="page">{{ item.text }}</span>
-          <meta itemprop="name" content="{{ item.text }}" />
-        {% else %}
+        {% if item.url %}
           <a href="{{ item.url }}" itemprop="item">{{ item.text }}</a>
-          <meta itemprop="name" content="{{ item.text }}" />
+        {% else %}
+          <span aria-current="page">{{ item.text }}</span>
         {% endif %}
+        <meta itemprop="name" content="{{ item.text }}" />
         <meta itemprop="position" content="{{ position }}" />
       </li>
       {% set position = position + 1 %}
