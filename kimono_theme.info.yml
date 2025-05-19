@@ -7,7 +7,6 @@ core_version_requirement: ^10 || ^11
 libraries:
   - kimono_theme/global
   - kimono_theme/alpine-cdn
-  - kimono_theme/splide-cdn
   # - kimono_theme/tailwind-cdn
   # - core/normalize
 regions:
