@@ -3,7 +3,9 @@ global:
   js:
     js/kimono-theme.js: {}
   dependencies:
+    - core/jquery
     - core/drupal
+    - kimono_theme/splide-cdn
   css:
     base:
       css/base/elements.css: {}
@@ -47,14 +49,18 @@ alpine-cdn:
         async: true
         defer: true
         crossorigin: anonymous
-swiper-cdn:
-  version: 3.14.9
+splide-cdn:
+  version: 3.6.9
+  css:
+    theme:
+      https://unpkg.com/@splidejs/splide@3.6.9/dist/css/splide.min.css:
+        weight: -50
+        type: external
+        minified: true
   js:
-    https://unpkg.com/swiper@11/swiper-element-bundle.min.js:
+    https://unpkg.com/@splidejs/splide@3.6.9/dist/js/splide.min.js:
       type: external
       minified: true
       attributes:
-        async: true
-        defer: true
         crossorigin: anonymous
 

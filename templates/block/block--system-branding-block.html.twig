@@ -14,16 +14,9 @@
  */
 #}
 {% block content %}
-<div class="ml-4 md:ml-10">
-  <a{{attributes.addClass('flex md:flex-col items-center space-x-2 space-y-1')}} href="{{ path('<front>') }}" rel="home">
-    {% if site_logo %}
-    <img{{attributes.addClass('size-10')}} src="{{ site_logo }}" alt="{{ 'Home'|t }}" fetchpriority="high" />
-    {% endif %}
-    {% if site_name %}
-    <span class="text-xs"  rel="home">{{ site_name }}</span>
-    {% endif %}
+<h1{{attributes.addClass('header_logo')}}>
+  <a href="{{ path('<front>') }}" class="header_logo_link">
+    <img src={{ site_logo }} alt="{{ 'Home'|t }}" width="300" height="69" />
   </a>
-
-  {{ site_slogan }}
-</div>
+</h1>
 {% endblock %}

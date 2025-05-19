@@ -1,104 +1,12 @@
 <?php
 
-declare(strict_types=1);
-
 /**
  * @file
- * Functions to support theming in the Kimono Theme theme.
+ * Theme hooks for Kimono Theme theme.
  */
 
-/**
- * Implements hook_preprocess_image_widget().
- */
-function theme_name_preprocess_image_widget(array &$variables): void {
-  $data = &$variables['data'];
-
-  // This prevents image widget templates from rendering preview container HTML
-  // to users that do not have permission to access these previews.
-  // @todo revisit in https://drupal.org/node/953034
-  // @todo revisit in https://drupal.org/node/3114318
-  if (isset($data['preview']['#access']) && $data['preview']['#access'] === FALSE) {
-    unset($data['preview']);
-  }
-}
-
-/**
- * Implements hook_preprocess_HOOK() for html.html.twig.
- */
-function theme_name_preprocess_html(array &$variables) {
-  // Add META tag title + description for Basic Page node fields.
-  // This assumes the 'body' field is present and populated.
-  // Load the node entity from current route.
-  $node = \Drupal::routeMatch()->getParameter('node');
-  if ($node) {
-    // Check if node type is basic page.
-    if ($node->getType() === 'article') {
-      $variables['page']['#attached']['html_head'][] = [
-        [
-          '#tag' => 'meta',
-          '#attributes' => [
-            'name' => 'title',
-            'content' => $node->get('title')->value,
-          ],
-        ],
-        'title',
-      ];
-      $variables['page']['#attached']['html_head'][] = [
-        [
-          '#tag' => 'meta',
-          '#attributes' => [
-            'name' => 'description',
-            // Get the summary, without HTML by default
-            'content' => $node->get('body')->summary,
-          ],
-        ],
-        'description',
-      ];
-    }
-  }
-}
-
-/**
- * Implements hook_preprocess_HOOK() for page.html.twig.
- */
-function kimono_theme_preprocess_page(array &$variables): void {
-
-}
-
-/**
- * Implements hook_preprocess_HOOK() for node.html.twig.
- */
-function kimono_theme_preprocess_node(array &$variables): void {
-
-}
-
-/**
- * Implements hook_preprocess_breadcrumb().
- */
-function kimono_theme_preprocess_breadcrumb(&$variables): void {
-  // We are creating a variable for the Current Page Title, to allow us to print
-  // it after the breadcrumbs loop has run.
-  $route_match = \Drupal::routeMatch();
-  // Search page titles aren't resolved using the title_resolver service - it
-  // will always return 'Search' instead of 'Search for [term]', which would
-  // give us a breadcrumb of Home >> Search >> Search.
-  // @todo Revisit after https://www.drupal.org/project/drupal/issues/2359901
-  // @todo Revisit after https://www.drupal.org/project/drupal/issues/2403359
-  $entity = $route_match->getParameter('entity');
-  if ($entity instanceof SearchPageInterface) {
-    $current_title = $entity->getPlugin()->suggestedTitle();
-  }
-  else {
-    $current_title = \Drupal::service('title_resolver')->getTitle(\Drupal::request(), $route_match->getRouteObject());
-  }
-  // Since we are printing the 'Current Page Title', add the URL cache context.
-  // If we don't, then we might end up with something like
-  // "Home > Articles" on the Recipes page, which should read "Home > Recipes".
-  $variables['#cache']['contexts'][] = 'url';
-
-  // 添加当前页面标题为最后一个面包屑项（非链接）
-  $variables['breadcrumb'][] = [
-    'text' => $current_title,
-    'url' => NULL, // 无链接
-  ];
+// Include all files from the includes directory.
+$includes_path = __DIR__ . '/includes/*.theme';
+foreach (glob($includes_path) as $file) {
+  require_once __DIR__ . '/includes/' . basename($file);
 }

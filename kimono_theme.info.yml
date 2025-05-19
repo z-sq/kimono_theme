@@ -7,11 +7,12 @@ core_version_requirement: ^10 || ^11
 libraries:
   - kimono_theme/global
   - kimono_theme/alpine-cdn
-  - kimono_theme/swiper-cdn
+  - kimono_theme/splide-cdn
   # - kimono_theme/tailwind-cdn
   # - core/normalize
 regions:
   header: 'Header'
+  primary_menu: 'Primary Menu'
   content: 'Content'
   breadcrumb: 'Breadcrumb'
   footer: 'Footer'

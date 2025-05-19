@@ -19,11 +19,16 @@
  * @see template_preprocess_container()
  */
 #}
-{%
-  set classes = [
-    'panel',
-    has_parent ? 'js-form-wrapper',
-    has_parent ? 'form-wrapper',
-  ]
-%}
-<div{{ attributes.addClass(classes) }}>{{ children }}</div>
+
+<hgroup class="main_ttl">
+  <h1 class="main_ttl_txt">Rental plan</h1>
+  <p class="main_ttl_bg">
+    <picture>
+      <source media="(max-width: 767px)" srcset="https://kimono-fukumoto.com/assets/img/plan/mv_sp.webp" type="image/webp">
+      <source media="(max-width: 767px)" srcset="https://kimono-fukumoto.com/assets/img/plan/mv_sp.jpg">
+      <source srcset="https://kimono-fukumoto.com/assets/img/plan/mv_pc.webp" type="image/webp">
+      <img src="https://kimono-fukumoto.com/assets/img/plan/mv_pc.jpg" alt="Rental plan" width="100%" height="352" class="main_ttl_bg_img">
+    </picture>
+  </p>
+</hgroup>
+{{ children }}
