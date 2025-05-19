@@ -57,10 +57,4 @@ splide-cdn:
         weight: -50
         type: external
         minified: true
-  js:
-    https://unpkg.com/@splidejs/splide@3.6.9/dist/js/splide.min.js:
-      type: external
-      minified: true
-      attributes:
-        crossorigin: anonymous
 

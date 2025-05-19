@@ -26,13 +26,14 @@
  * @see template_preprocess_block()
  */
 #}
-<section class="panel bg-[url(https://kimono-fukumoto.com/assets/img/top/bg_plan.png)]">
+<section class="top_plan">
 {{ title_prefix }}
 {% if label %}
-  <h2{{ title_attributes.addClass('panel_title') }}>{{ label }}</h2>
+  <h2{{ title_attributes.addClass('ttl01 fade fade_in') }}>{{ label }}</h2>
 {% endif %}
 {{ title_suffix }}
 {% block content %}
   {{ content }}
 {% endblock %}
+<p class="fade"><a href="/rental_plan" class="btn01">see more</a></p>
 </section>
