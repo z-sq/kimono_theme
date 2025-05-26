@@ -1,0 +1,9 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: kimono_theme\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh-hans\n"
+
+msgid "Rental Plan"
+msgstr "租赁计划"
