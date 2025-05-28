@@ -62,17 +62,6 @@
 #}
 <link rel="stylesheet" href="https://kimono-fukumoto.com/assets/css/plan_single.min.css" />
 
-<hgroup class="main_ttl">
-    <h1 class="main_ttl_txt">Rental plan</h1>
-    <p class="main_ttl_bg">
-        <picture>
-            <source media="(max-width: 767px)" srcset="https://kimono-fukumoto.com/assets/img/plan/mv_sp.jpg">
-            <source media="(min-width: 768px)" srcset="https://kimono-fukumoto.com/assets/img/plan/mv_pc.jpg">
-            <img src="https://kimono-fukumoto.com/assets/img/plan/mv_pc.jpg" alt="Rental plan" width="100%" height="352" loading="lazy" class="main_ttl_bg_img">
-        </picture>
-    </p>
-</hgroup>
-
 <section class="plan_detail contents_wrp">
     <h1 class="ttl01">{{ label }}</h1>
 
@@ -85,7 +74,7 @@
             </p>
             <div class="plan_detail_list_item_price" style="display:flex;align-items: flex-end;">
                 {{ content.field_price }}
-                <span>円（tax included）</span>
+                <span>円（{{ 'excl. tax' | t }}）</span>
             </div>
 
             <div class="plan_detail_list_item_img">
@@ -116,7 +105,7 @@
             <section class="plan_detail_list_item_set">
                 <h3 class="plan_detail_list_item_ttl">set content</h3>
                 <div class="plan_detail_list_item_set_desc">
-                    {{ content.field_body }}
+                    {{ content.body }}
                 </div>
             </section>
         </li>
@@ -155,4 +144,4 @@
   thumbnails.mount();
 </script>
 
-{{ content|without('field_media_image','field_price', 'field_body') }}
+{{ content|without('field_media_image','field_price', 'body') }}

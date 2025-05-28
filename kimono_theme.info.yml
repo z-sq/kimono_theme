@@ -10,8 +10,10 @@ libraries:
   # - kimono_theme/tailwind-cdn
   # - core/normalize
 regions:
+  content: 'Content'
   header: 'Header'
   primary_menu: 'Primary Menu'
-  content: 'Content'
   breadcrumb: 'Breadcrumb'
   footer: 'Footer'
+'interface translation project': kimono_theme
+'interface translation server pattern': 'themes/custom/kimono_theme/translations/%language.po'
