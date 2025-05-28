@@ -1,18 +1,17 @@
-kimono_theme.mobile:
-  label: mobile
-  mediaQuery: ''
+mytheme.mobile:
+  label: Mobile
+  mediaQuery: '(min-width: 0px)'
   weight: 0
-  multipliers:
-    - 1x
-stark.narrow:
-  label: narrow
-  mediaQuery: 'all and (width >= 48rem)'
+  multipliers: [1x, 2x]
+
+mytheme.narrow:
+  label: Narrow
+  mediaQuery: '(min-width: 640px) and (max-width: 1023px)'
   weight: 1
-  multipliers:
-    - 1x
-stark.wide:
-  label: wide
-  mediaQuery: 'all and (width >= 64rem)'
+  multipliers: [1x, 2x]
+
+mytheme.wide:
+  label: Wide
+  mediaQuery: '(min-width: 1024px)'
   weight: 2
-  multipliers:
-    - 1x
+  multipliers: [1x, 2x]
