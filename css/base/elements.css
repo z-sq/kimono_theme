@@ -1,49 +1,3 @@
-@keyframes pulse-throbber {
-  0% {
-    opacity: 1;
-    transform: scaley(1);
-  }
-
-  100% {
-    opacity: 0.2;
-    transform: scaley(0.5);
-  }
-}
-
-[data-big-pipe-placeholder-id] {
-  position: relative;
-  display: block;
-  margin: 20px auto;
-  width: 6px;
-  height: 30px;
-  background: rebeccaPurple;
-  animation: pulse-throbber 0.2s infinite;
-  animation-delay: (0.2s / 3);
-  animation-direction: alternate;
-
-  &:before,
-  &:after {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: rebeccaPurple;
-    top: 0;
-    animation: pulse-throbber 0.2s infinite;
-    animation-direction: alternate;
-  }
-
-  &:before {
-    left: -12px;
-  }
-
-  &:after {
-    left: 12px;
-    animation-delay: (0.2s / 1.5);
-  }
-}
-
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0;
@@ -408,7 +362,7 @@ table {
   content: "";
   display: inline-block;
   aspect-ratio: 13/6;
-  background: url(../../images/ornament02.svg) no-repeat;
+  background: url(/themes/custom/kimono_theme/images/ornament02.svg) no-repeat;
   background-size: contain;
   position: absolute;
   z-index: 1;
@@ -478,7 +432,8 @@ table {
 }
 
 .ttl01::before {
-  content: url(../../images/ornament01.svg);
+  content: url(/themes/custom/kimono_theme/images/ornament01.svg);
+  filter: grayscale(50%);
 }
 
 .ttl02 {
@@ -778,7 +733,7 @@ html[lang="zh-hant"] .header_menu_lang_change .-nolang::before {
   flex: none;
   width: 10px;
   aspect-ratio: 2/1;
-  background: url(../../images/arrowup.svg) no-repeat;
+  background: url(/themes/custom/kimono_theme/images/arrowup.svg) no-repeat;
   background-size: contain;
   transform: rotate(180deg);
   transition: transform 0.4s ease-out;
@@ -913,8 +868,8 @@ html[lang="zh-hant"] .header_menu_lang_change .-nolang::before {
     width: 18px;
     aspect-ratio: 5/4;
     background-color: #fff;
-    -webkit-mask-image: url(../../images/ornament01.svg);
-    mask-image: url(../../images/ornament01.svg);
+    -webkit-mask-image: url(/themes/custom/kimono_theme/images/ornament01.svg);
+    mask-image: url(/themes/custom/kimono_theme/images/ornament01.svg);
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     -webkit-mask-size: contain;
@@ -1019,8 +974,8 @@ html[lang="zh-hant"] .header_menu_lang_change .-nolang::before {
 
   .header_menu_lang .wpml-ls-item-toggle::after {
     background: #550914;
-    -webkit-mask-image: url(../../images/arrowup.svg);
-    mask-image: url(../../images/arrowup.svg);
+    -webkit-mask-image: url(/themes/custom/kimono_theme/images/arrowup.svg);
+    mask-image: url(/themes/custom/kimono_theme/images/arrowup.svg);
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     -webkit-mask-size: contain;
@@ -1176,7 +1131,7 @@ html[lang="zh-hant"] .header_menu_lang_change .-nolang::before {
   display: block;
   width: 100%;
   height: 100%;
-  background: url(../../images/arrowup.svg) no-repeat 50% 50% #550914;
+  background: url(/themes/custom/kimono_theme/images/arrowup.svg) no-repeat 50% 50% #550914;
 }
 
 .pagetop a span {
@@ -1461,7 +1416,7 @@ html {
 }
 
 .mainContents {
-  background: url(../../images/bg.png);
+  background: url(/themes/custom/kimono_theme/images/bg.png);
   position: relative;
   z-index: 1;
   overflow: hidden;
@@ -1478,16 +1433,16 @@ html {
 
 @media all and (min-width: 768px) {
   .mainContents::before {
-    background-image: url(../../images/bg_left.png),
-      url(../../images/bg_right.png);
+    background-image: url(/themes/custom/kimono_theme/images/bg_left.png),
+      url(/themes/custom/kimono_theme/images/bg_right.png);
     background-position: calc(0% - 80px) -120px, calc(100% + 80px) -120px;
   }
 }
 
 @media screen and (max-width: 767px) {
   .mainContents::before {
-    background-image: url(../../images/bg_left_sp.png),
-      url(../../images/bg_right_sp.png);
+    background-image: url(/themes/custom/kimono_theme/images/bg_left_sp.png),
+      url(/themes/custom/kimono_theme/images/bg_right_sp.png);
     background-position: calc(0% - 50px) 0, calc(100% + 50px) 0;
     background-size: auto 100vh;
   }
@@ -1571,7 +1526,7 @@ html {
   content: "";
   flex: none;
   aspect-ratio: 2/1;
-  background: url(../../images/arrowup.svg) no-repeat;
+  background: url(/themes/custom/kimono_theme/images/arrowup.svg) no-repeat;
   background-size: contain;
   transform: rotate(180deg);
   transition: transform 0.4s ease-out;
@@ -1611,7 +1566,7 @@ html {
     content: "";
     flex: none;
     aspect-ratio: 2/1;
-    background: url(../../images/arrowup.svg) no-repeat;
+    background: url(/themes/custom/kimono_theme/images/arrowup.svg) no-repeat;
     background-size: contain;
     transform: rotate(180deg);
     transition: transform 0.4s ease-out;
