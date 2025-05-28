@@ -7,6 +7,7 @@
 
 use Drupal\Core\Render\Element;
 use Drupal\block_content\BlockContentInterface;
+use Drupal\language\Entity\ConfigurableLanguage;
 
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
@@ -79,7 +80,13 @@ function radix_preprocess_block_content(&$variables) {
 function kimono_theme_preprocess_links__language_block(&$variables) {
   // 获取当前语言对象
   $language = \Drupal::languageManager()->getCurrentLanguage();
+  $langcode = $language->getId();
+
+  // 获取语言配置实体
+  $configurable_language = ConfigurableLanguage::load($langcode);
+  $custom_name = $configurable_language ? $configurable_language->label() : $language->getName();
+
   // 注入到模板变量
   $variables['language'] = $language;
-  $variables['current_language_name'] = $language->getName();
+  $variables['current_language_name'] = $custom_name;
 }
