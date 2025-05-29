@@ -125,3 +125,8 @@
   align-items: center;
   color: #fff;
 }
+
+.about_intro_box_img img {
+  height: 450px;
+  object-fit: cover;
+}
