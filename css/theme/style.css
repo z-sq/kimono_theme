@@ -127,6 +127,11 @@
 }
 
 .about_intro_box_img img {
-  height: 450px;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+}
+
+.about_list_item_img img {
+  aspect-ratio: 3/2;
   object-fit: cover;
 }
