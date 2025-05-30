@@ -14,14 +14,27 @@
  */
 #}
 {% block content %}
-<h1{{attributes.addClass('header_logo')}}>
-  <a href="{{ path('<front>') }}" class="header_logo_link">
-    {% if site_logo %}
-    <img src={{ site_logo }} alt="{{ 'Home'|t }}" width="300" height="69" />
-    {% endif %}
-    {% if site_name %}
-      <span>{{ site_name }}</span>
-    {% endif %}
-  </a>
-</h1>
+{% if is_front %}
+  <h1{{attributes.addClass('header_logo')}}>
+    <a href="{{ path('<front>') }}" rel="home" class="header_logo_link">
+      {% if site_logo %}
+      <img src={{ site_logo }} alt="{{ 'Home'|t }}" width="300" height="69" />
+      {% endif %}
+      {% if site_name %}
+        <span>{{ site_name }}</span>
+      {% endif %}
+    </a>
+  </h1>
+{% else %}
+  <div{{attributes.addClass('header_logo')}}>
+    <a href="{{ path('<front>') }}" rel="home" class="header_logo_link">
+      {% if site_logo %}
+      <img src={{ site_logo }} alt="{{ 'Home'|t }}" width="300" height="69" />
+      {% endif %}
+      {% if site_name %}
+        <span>{{ site_name }}</span>
+      {% endif %}
+    </a>
+  </div>
+{% endif %}
 {% endblock %}
