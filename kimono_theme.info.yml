@@ -5,7 +5,6 @@ description: A flexible theme with a responsive, mobile-first layout.
 package: Custom
 core_version_requirement: ^10 || ^11
 libraries:
-  - kimono_theme/global
   - kimono_theme/alpine-cdn
   # - kimono_theme/tailwind-cdn
   # - core/normalize
