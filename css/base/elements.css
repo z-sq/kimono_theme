@@ -1416,7 +1416,7 @@ html {
 }
 
 .mainContents {
-  background: url(https://static.ennichikimono.com/kimono_theme/bg.png);
+  /* background: url(https://static.ennichikimono.com/kimono_theme/bg.png); */
   position: relative;
   z-index: 1;
   overflow: hidden;
