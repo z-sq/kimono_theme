@@ -9,23 +9,21 @@
 #}
 {% if breadcrumb %}
   {# 面包屑主模板 #}
-  <nav{{attributes}} role="navigation" aria-labelledby="system-breadcrumb">
+  <nav role="navigation" aria-labelledby="system-breadcrumb">
     {# 仅屏幕阅读器可见的标题 #}
     <h2 id="system-breadcrumb" class="sr-only" style="display: none">{{ 'Breadcrumb'|t }}</h2>
     {# 面包屑列表 #}
     <ol class="BreadcrumbList contents_wrp" itemscope itemtype="https://schema.org/BreadcrumbList">
-    {% set position = 1 %}
     {% for item in breadcrumb %}
       <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
         {% if item.url %}
-          <a href="{{ item.url }}" itemprop="item">{{ item.text }}</a>
+        <a href="{{ item.url }}" itemprop="item">{{ item.text }}</a>
         {% else %}
-          <span aria-current="page">{{ item.text }}</span>
+        <span aria-current="page">{{ item.text }}</span>
         {% endif %}
         <meta itemprop="name" content="{{ item.text }}" />
-        <meta itemprop="position" content="{{ position }}" />
+        <meta itemprop="position" content="{{ loop.index }}" />
       </li>
-      {% set position = position + 1 %}
     {% endfor %}
     </ol>
   </nav>
