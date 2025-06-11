@@ -433,7 +433,6 @@ table {
 
 .ttl01::before {
   content: url(https://static.ennichikimono.com/kimono_theme/ornament01.svg);
-  filter: grayscale(50%);
 }
 
 .ttl02 {
