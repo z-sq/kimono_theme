@@ -867,8 +867,8 @@ html[lang="zh-hant"] .header_menu_lang_change .-nolang::before {
     width: 18px;
     aspect-ratio: 5/4;
     background-color: #fff;
-    -webkit-mask-image: url(https://static.ennichikimono.com/kimono_theme/ornament01.svg);
-    mask-image: url(https://static.ennichikimono.com/kimono_theme/ornament01.svg);
+    -webkit-mask-image: url(https://static.ennichikimono.com/kimono_theme/ornament.svg);
+    mask-image: url(https://static.ennichikimono.com/kimono_theme/ornament.svg);
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     -webkit-mask-size: contain;
