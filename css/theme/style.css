@@ -135,3 +135,24 @@
   aspect-ratio: 3/2;
   object-fit: cover;
 }
+
+.sub_menu_list {
+  display: none;
+  position: absolute;
+  top: 100%;
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #aa2828;
+}
+
+.sub_menu_list a {
+  display: block;
+  padding: 4px 8px;
+}
+
+.header_menu_list>li {
+  position: relative;
+}
+.header_menu_list>li:hover .sub_menu_list {
+  display: block;
+}

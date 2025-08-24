@@ -32,16 +32,8 @@
     {% if menu_level == 0 %}
       <ul{{ attributes.addClass('header_menu_list') }}>
     {% else %}
-      <ul>
+      <ul class="sub_menu_list">
     {% endif %}
-    {# {% for item in items %}
-      <li{{ item.attributes }}>
-        {{ link(item.title, item.url) }}
-        {% if item.below %}
-          {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
-        {% endif %}
-      </li>
-    {% endfor %} #}
 
     {% for item in items %}
       <li{{ item.attributes }}>
@@ -51,7 +43,15 @@
             item.in_active_trail ? 'current',
           ]
         %}
-        <a{{ item.attributes.addClass(item_classes) }} href="{{ item.url }}"> {{ item.title }} </a>
+        {% if menu_level == 0 %}
+          <a{{ item.attributes.addClass(item_classes) }} href="{{ item.url }}"> {{ item.title }} </a>
+        {% else %}
+          <a href="{{ item.url }}"> {{ item.title }} </a>
+        {% endif %}
+
+        {% if item.below %}
+          {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+        {% endif %}
       </li>
     {% endfor %}
     </ul>
